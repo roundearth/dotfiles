@@ -1,3 +1,5 @@
+*note: pictures in this readme files are weird, I'll fix it after class*
+
 # runarcn dotfiles
 Dotfiles is how you customize and personalize my systems. These are mine. 
 
