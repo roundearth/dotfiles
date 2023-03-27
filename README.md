@@ -30,11 +30,10 @@ The dotfiles currently contain a few bugs and issues. As this is my first instal
 | Spotify | Spotify is unresponsive at times. Do not know the reason why. |
 
 ## Wallpaper
-![opensourcerer.png](../../_resources/opensourcerer.png)
-
+![wallpaper](https://github.com/runarcn/dotfiles/blob/306912a6da8919b4513882dc9b00e35ce2c98439/pictures/opensourcerer.png)
 
 ## Screenshot
-![b5d3c631d2fd21090b704e0f5eed90a5.png](../../_resources/b5d3c631d2fd21090b704e0f5eed90a5.png)
+will be fixed soon
 
 
 # .bashrc
