@@ -1,7 +1,7 @@
 # runarcn dotfiles
 Dotfiles is how you customize and personalize my systems. These are mine. 
 
-This repository functions as a backup for me incase I ever brick my system (oopsies) and to share with everyone should anyone else want to use, study or modify them and should I need to link to them on a forum or similar.
+This repository functions as a backup for me incase I ever brick my system (oopsies), to share with everyone should anyone else want to use, study or modify them and should I need to link to them on a forum or similar.
 
 You may use the dotfiles as you want as long as they follow the terms and conditions of the GPL-3 license. Read the [LICENSE](https://github.com/runarcn/dotfiles/blob/main/LICENSE)-file for more information about this.
 
