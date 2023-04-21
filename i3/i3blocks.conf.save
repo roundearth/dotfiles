@@ -40,23 +40,50 @@
 separator=false
 markup=pango
 
-# Blocks
+#[Weather]
+#command=~/.config/i3/scripts/openweather
+# or:
+#command=~/.config/i3/scripts/openweather-city
+#interval=1800
+#color=#7275b3
+
+# [terminal]
+# full_text= 
+# color=#807dfe
+# command=i3-msg -q exec xfce4-terminal
+
+# [browser]
+# full_text= 
+# color=#ff7f81
+# command=i3-msg -q exec firefox
+
+# [files]
+# full_text= 
+# color=#7f3fbf
+
+# [mail]
+#full_text= 
+#color=#dbcb75
+#command=i3-msg -q exec thunderbird
 
 [simple-2]
 full_text=: :
 color=#717171
 align = center
 
-[date and time]
+[time]
 command=/bin/bash -c "date '+%d.%m | %H:%M'"
 interval=1
+align=center
+
+# [simple-2]
+# full_text=: :
+# color=#717171
+# align = center
 
 [simple-2]
 full_text=: :
 color=#717171
-# min_width=356
-align=left
-
 
 # Disk usage
 #
@@ -75,8 +102,7 @@ interval=30
 [cpu_usage]
 label=
 command=~/.config/i3/scripts/cpu_usage
-# min_width = 100.00%
-# align = center
+#min_width=CPU: 100.00%
 interval=2
 
 [memory]
@@ -94,6 +120,16 @@ interval=30
 # where SENSOR_CHIP can be find with sensors output
 # can be used also for GPU temperature or other temperature sensors lm-sensors detects.
 
+# showing name of connected network (enable for wifi use)
+#[net]
+#label=
+#command=echo "$(LANG=C nmcli d | grep connected  | awk '{print $4}')"
+#interval=30
+
+# [bandwidth]
+# command=~/.config/i3/scripts/bandwidth2
+# interval=persist
+
 # Battery indicator
 [battery]
 command=~/.config/i3/scripts/battery2
@@ -106,7 +142,6 @@ interval=30
 full_text=: :
 color=#717171
 
-# Notification icon
 [dunst-status]
 command=~/.config/i3/scripts/dunst-status.sh
 interval=1
@@ -119,6 +154,34 @@ command=pavucontrol
 command=~/.config/i3/scripts/volume
 instance=Master
 interval=1
+
+# display keyboard layout name
+# for keyboard layouts switcher
+# see i3 config file
+# this needs xkblayout-state installed from the AUR:
+# https://aur.archlinux.org/packages/xkblayout-state-git
+#[keyboard-layout]
+#command=~/.config/i3/scripts/keyboard-layout
+#interval=2
+
+# [keybindings]
+# full_text=
+# command=~/.config/i3/scripts/keyhint
+
+# power-profiles-daemon implementation:
+# needs package power-profiles-daemon installed and the service running see here:
+# https://wiki.archlinux.org/title/CPU_frequency_scaling#power-profiles-daemon
+
+#set power-profile
+# [ppd_menu]
+# full_text=
+# command=~/.config/i3/scripts/power-profiles
+# color=#407437
+
+#Show the current power-profile
+# [ppd-status]
+# command=~/.config/i3/scripts/ppd-status
+# interval=5
 
 [shutdown_menu]
 full_text=

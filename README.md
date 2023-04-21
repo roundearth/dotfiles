@@ -1,5 +1,3 @@
-*note: pictures in this readme files are weird, I'll fix it after class*
-
 # runarcn dotfiles
 Dotfiles is how you customize and personalize my systems. These are mine. 
 
@@ -14,6 +12,9 @@ Everything provided in this repository is Free/Libre Software and is licensed un
 
 Since I want to keep my politics (mostly) out of my work with software I won't go much further into why it's important than what the GNU project does on their websites. If you're interested about why I believe free software is important, you might want to follow my [mastodon](https://mstdn.social/@runarcn) where I'll post about it every now and then. In the future, I might create a blog like so many other people have done.
 
+## *DISCLAIMER*
+I don't know how to use git at all. If stuff here looks weird, that's probably why. 
+
 # i3
 _This part is exclusive for my i3-config. **I highly recommend following EndeavourOS's install scripts before downloading my config-files.**_
 
@@ -24,17 +25,10 @@ To install my dotfiles, clone them either through `git` with `git clone https://
 The dotfiles currently contain a few bugs and issues. As this is my first install of i3 I haven't figured out of how to iron out the kinks yet, but it's currently useable. Here is a list of some of the known bugs
 | Related software | Description |
 | - | - |
-| dunst | Dunst needs to be manually ran in order to fetch notifications. This (partly) breaks screenshot utilities like the in-app Firefox screenshot utility and Flameshot. |
-| i3blocks date and time | The date and time display in `i3blocks.conf` isn't centered even though I've added the `align=center` tag |
-| Signal | After changing desktop a few times, Signal breaks on irregular intervals. Do not know the reason why. |
-| Spotify | Spotify is unresponsive at times. Do not know the reason why. |
-
-## Wallpaper
-![wallpaper](https://github.com/runarcn/dotfiles/blob/306912a6da8919b4513882dc9b00e35ce2c98439/pictures/opensourcerer.png)
+| oh damn I can't find any issues right now | cooool |
 
 ## Screenshot
 will be fixed soon
-
 
 # .bashrc
 The .bashrc file is exactly the same as the default one with a few custom aliases at the bottom. These are some I use for simplicity's sake, and some for dumb typos I make.

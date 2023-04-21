@@ -15,11 +15,6 @@
 # Please see http://i3wm.org/docs/userguide.html for the official i3 reference!
 
 #######################
-#   for microeditor   # 
-#######################
-# micro: ft=shell
-
-#######################
 # config starts here: #
 #######################
 
@@ -167,6 +162,7 @@ mode "resize" {
 # back to normal: Enter or Escape
 	bindsym Return mode "default"
         bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -286,6 +282,9 @@ bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 
+# Do not disturb mode
+bindsym $mod+Shift+d exec --no-startup-id ~/.config/dunst/dunst-setpaused.sh
+
 ##########################################
 # configuration for workspace behaviour: #
 ##########################################
@@ -317,16 +316,18 @@ assign [class="Xfce4-terminal"] $ws1
 assign [class="(?i)firefox"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="discord"] $ws4
-assign [class="Signal"] $ws4
 assign [class="Caprine"] $ws4
+assign [class="Signal"] $ws4
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Xfce4-terminal] focus
 for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
+for_window [class=Thunderbird] focus
 for_window [class=discord] focus
 for_window [class=Caprine] focus
 for_window [class=Signal] focus
+
 
 ##############
 # compositor #
@@ -355,7 +356,7 @@ for_window [class=Signal] focus
 #exec_always --no-startup-id picom -b
 #
 # for custom config:
-#exec_always --no-startup-id picom --config  ~/.config/picom.conf
+#exec_always --no-startup-id picom --config  ~/..config/picom.conf
 
 #############################################
 # autostart applications/services on login: #
@@ -373,7 +374,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
 
 # start welcome app
-#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3
+#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
 
 # num lock activated
 #exec --no-startup-id numlockx on
@@ -408,7 +409,8 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 #exec --no-startup-id xscreensaver --no-splash
 
 # Desktop notifications
-exec_always --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
+exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
+exec_always dunst
 # alternative if you installed aside with XFCE4:
 # exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
@@ -460,7 +462,7 @@ for_window [class="urxvt"] border pixel 1
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
-#for_window [class=".*"] resize set 640 480 #to change size of all floating windows
+#for_window [class=".*"] resize set 640 480 #to change size of all floating windows 
 
 # set position of floating window
 #for_window [class=".*"] move position center
@@ -584,5 +586,5 @@ bindsym $mod+t exec rofi -show window \
 #####################################
 #           Custom commands         #
 #####################################
-# exec xinput set-prop 12 321 1
+# exec_always xinput set-prop 12 323 1
 
