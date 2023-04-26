@@ -15,11 +15,6 @@
 # Please see http://i3wm.org/docs/userguide.html for the official i3 reference!
 
 #######################
-#   for microeditor   # 
-#######################
-# micro: ft=shell
-
-#######################
 # config starts here: #
 #######################
 
@@ -155,8 +150,8 @@ mode "resize" {
 # Pressing down will grow the window's height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym ntilde resize grow width 10 px or 10 ppt
+        bindsym s resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
 	bindsym Left resize shrink width 10 px or 10 ppt
@@ -380,9 +375,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec --no-startup-id dex --autostart --environment i3
 
-# start welcome app
-#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3
-
 # num lock activated
 #exec --no-startup-id numlockx on
 
@@ -398,7 +390,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
  exec --no-startup-id sleep 2 && nitrogen --restore
- exec feh --bg-scale ~/.local/share/wallpapers/opensourcerer.png
+ exec_always feh --bg-scale ~/.config/i3/wallpaper/ditf.png
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -409,7 +401,6 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 # use xautolock to use autosuspend rules for mobile devices
 # https://wiki.archlinux.org/title/Session_lock#xautolock
 #exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
-
 
 # xscreensaver
 # https://www.jwz.org/xscreensaver
@@ -430,6 +421,7 @@ exec_always dunst
 # exec --no-startup-id sleep 2 && xfce4-terminal
 # exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 # exec --no-startup-id sleep 3 && thunar
+exec --no-startup-id flameshot
 
 ###############
 # system tray #
@@ -445,6 +437,9 @@ exec --no-startup-id nm-applet
 
 # clipman-applet
 #exec --no-startup-id xfce4-clipman
+
+# kde wallet
+exec --no-startup-id kwalletd5
 
 ##################
 # floating rules #
