@@ -34,14 +34,6 @@ set $mod Mod4
 # default i3 tiling mode:
 workspace_layout default
 
-# i3 stacking layout:
-# Each window will be fullscreen and tabbed top to bottom.
-#workspace_layout stacking
-
-# i3 tabbed layout:
-# Each new window will open fullscreen as a tab (left to right)
-#workspace_layout tabbed
-
 ##############################
 # extra options for windows: #
 ##############################
@@ -49,18 +41,9 @@ workspace_layout default
 #border indicator on windows:
 new_window pixel 1
 
-# thin borders
-# hide_edge_borders both
-
 # Set inner/outer gaps
 gaps inner 6
 gaps outer 3
-
-# show window title bars (not officially supported with i3gaps)
-#default_border normal
-
-# window title alignment
-#title_align center
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -143,11 +126,7 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
 
 # resize window (you can also use the mouse for that):
 mode "resize" {
-# These bindings trigger as soon as you enter the resize mode
-# Pressing left will shrink the window's width.
-# Pressing right will grow the window's width.
-# Pressing up will shrink the window's height.
-# Pressing down will grow the window's height.
+# IJKL for resizing with keyboard instead of arrowkeys (no vim bindings here sowwy)
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym i resize shrink height 10 px or 10 ppt
@@ -179,12 +158,6 @@ bindsym $mod+q kill
 # exit-menu
 bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
 
-# Lock the system
-# lock with a picture:
-# bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
-# lock by blurring the screen:
-# bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -193,9 +166,6 @@ bindsym $mod+Shift+r restart
 
 # keybinding in fancy rofi (automated):
 bindsym F1 exec ~/.config/i3/scripts/keyhint-2
-# alternative
-# keybinding list in editor:
-# bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
 bindsym XF86MonBrightnessUp exec xbacklight +10 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
@@ -306,17 +276,9 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# use workspaces on different displays:
-# where you have to replace VGA-0/HDMI-0 with the names for your displays
-# you can get from xrandr command
-#workspace $ws1 output VGA-0
-#workspace $ws2 output VGA-0
-#workspace $ws3 output HDMI-0
-#workspace $ws4 output HDMI-0
-#workspace $ws5 output HDMI-0
-
 # bind program to workspace and focus to them on startup:
 assign [class="Xfce4-terminal"] $ws1
+assign [class="VSCodium"] $ws1
 assign [class="(?i)firefox"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="discord"] $ws4
@@ -325,11 +287,13 @@ assign [class="Caprine"] $ws4
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Xfce4-terminal] focus
+for_window [class=VSCodium] focus
 for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
 for_window [class=discord] focus
 for_window [class=Caprine] focus
 for_window [class=Signal] focus
+for_window [class=codium] focus
 
 ##############
 # compositor #
@@ -355,10 +319,10 @@ for_window [class=Signal] focus
 # For modifications, it can be copied to ~/.config/picom/picom.conf or ~/.config/picom.conf
 # install picom package (yay -S picom)
 # start using default config
-#exec_always --no-startup-id picom -b
+# exec_always --no-startup-id picom -b
 #
 # for custom config:
-#exec_always --no-startup-id picom --config  ~/.config/picom.conf
+#exec_always --no-startup-id picom --config  ~/.config/picom/picom.conf
 
 #############################################
 # autostart applications/services on login: #
@@ -418,10 +382,8 @@ exec_always dunst
 # exec_always --no-startup-id autotiling
 
 # Autostart apps as you like
-# exec --no-startup-id sleep 2 && xfce4-terminal
-# exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
-# exec --no-startup-id sleep 3 && thunar
 exec --no-startup-id flameshot
+exec --no-startup-id kwalletd5
 
 ###############
 # system tray #
@@ -434,12 +396,6 @@ exec --no-startup-id flameshot
 
 # networkmanager-applet
 exec --no-startup-id nm-applet
-
-# clipman-applet
-#exec --no-startup-id xfce4-clipman
-
-# kde wallet
-exec --no-startup-id kwalletd5
 
 ##################
 # floating rules #
@@ -567,11 +523,7 @@ strip_workspace_numbers yes
 bindsym $mod+d exec rofi -modi drun -show drun \
 		-config ~/.config/rofi/rofidmenu.rasi
 
-#bindsym F9 exec rofi -modi drun -show drun \
-#		-config ~/.config/rofi/rofidmenu.rasi
-
 ## rofi bindings for window menu ($mod+t /F10 optional disabled)
-
 bindsym $mod+t exec rofi -show window \
 		-config ~/.config/rofi/rofidmenu.rasi
 
