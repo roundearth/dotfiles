@@ -24,10 +24,19 @@ The dotfiles currently contain a few bugs and issues. As this is my first instal
 | - | - |
 | oh damn I can't find any issues right now | cooool |
 
-## Screenshot
-will be fixed soon
-
 # .bashrc
 The .bashrc file is exactly the same as the default one with a few custom aliases at the bottom. These are some I use for simplicity's sake, and some for dumb typos I make.
 
-You should make sure you've installed all the packages at the bottom of .bashrc to so that you don't get any weird breakages
+You should make sure you've installed all the packages at the bottom of .bashrc to so that you don't get any weird breakages, such as micro and btop
+
+# dunstrc
+Nothing special here, just moving the notifications to top right corner
+
+# btop
+Changed theme to a new default theme
+
+# micro
+Plugins and theming
+
+# xorg.conf.d
+Natural scrolling for touchpad (not for mouse and trackpoint)
