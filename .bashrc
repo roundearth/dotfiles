@@ -97,3 +97,6 @@ alias htop=btop
 alias poewroff='poweroff'
 alias powerof='poweroff'
 alias hotp='btop'
+
+## self-care
+node ~/bashrc-scripts/affirm.js
