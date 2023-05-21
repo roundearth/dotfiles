@@ -20,6 +20,9 @@ The .bashrc file is exactly the same as the default one with a few custom aliase
 
 You should make sure you've installed all the packages at the bottom of .bashrc to so that you don't get any weird breakages, such as micro and btop
 
+### bashrc-scripts
+A folder where I store the scripts I've written for .bashrc. Install this in your home folder.
+
 ## dunstrc
 Nothing special here, just moving the notifications to top right corner
 
@@ -31,3 +34,4 @@ Plugins and theming
 
 ## xorg.conf.d
 Natural scrolling for touchpad (not for mouse and trackpoint)
+
