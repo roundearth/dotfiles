@@ -9,6 +9,9 @@ const affirmations = [
 const randomIndex = Math.floor(Math.random() * affirmations.length);
 const randomAffirmation = affirmations[randomIndex];
 
-console.log("#####################");
-console.log(randomAffirmation);
-console.log("#####################");
+const affirmationLength = randomAffirmation.length;
+const hashtag = "#".repeat(affirmationLength + 4);
+
+console.log(hashtag);
+console.log(" " + randomAffirmation);
+console.log(hashtag);
