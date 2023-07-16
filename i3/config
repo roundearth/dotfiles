@@ -69,9 +69,9 @@ bindsym $mod+Shift+0    move container to workspace  $ws10
 mode "resize" {
 
 # IJKL for resizing with keyboard instead of arrowkeys (no vim bindings here sowwy)
-        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
-        bindsym i resize shrink height 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
@@ -111,9 +111,9 @@ bindsym XF86MonBrightnessUp exec xbacklight +5 && notify-send "Brightness - $(xb
 bindsym XF86MonBrightnessDown exec xbacklight -5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+i focus up
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
@@ -123,9 +123,9 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+i move up
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
@@ -135,7 +135,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -313,7 +313,7 @@ exec --no-startup-id kwalletd5
 # you need to have tray apps started manually one by one:
 
 # start blueberry app for managing bluetooth devices from tray:
-# exec-always --no-startup-id blueberry-tray
+exec-always --no-startup-id blueberry-tray
 
 # networkmanager-applet
 # exec --no-startup-id nm-applet
