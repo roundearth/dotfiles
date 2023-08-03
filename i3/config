@@ -68,7 +68,7 @@ bindsym $mod+Shift+0    move container to workspace  $ws10
 # resize window (you can also use the mouse for that):
 mode "resize" {
 
-# IJKL for resizing with keyboard instead of arrowkeys (no vim bindings here sowwy)
+# HJKL for resizing windows (vim my beloved)
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym j resize shrink height 10 px or 10 ppt
