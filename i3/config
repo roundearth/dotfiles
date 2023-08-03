@@ -313,7 +313,7 @@ exec --no-startup-id kwalletd5
 # you need to have tray apps started manually one by one:
 
 # start blueberry app for managing bluetooth devices from tray:
-exec-always --no-startup-id blueberry-tray
+exec_always --no-startup-id blueberry-tray
 
 # networkmanager-applet
 # exec --no-startup-id nm-applet
@@ -326,7 +326,7 @@ exec-always --no-startup-id blueberry-tray
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-
+ 
 # set floating (nontiling) for special apps
 for_window [class="Xsane" instance="xsane"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
