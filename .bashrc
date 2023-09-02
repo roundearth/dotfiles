@@ -85,18 +85,25 @@ _open_files_for_editing() {
 # alias pacdiff=eos-pacdiff
 ################################################################################
 
-################################################################################
-# CUSTOM BASH ALIASES
-################################################################################
+#######################
+# CUSTOM BASH ALIASES #
+#######################
 alias unfuck-wifi='sudo systemctl restart NetworkManager'
 alias displayserver='echo $XDG_SESSION_TYPE'
-alias i3config='micro ~/.config/i3/config '
-alias htop=btop
+
+## shortcuts for dotfiles (general and useable by anyone)
+alias i3config='nvim ~/.config/i3/config'
+alias bashrc='nvim ~/.bashrc && source ~/.bashrc && echo .bashrc successfully updated!'
+
+## shortcuts for school (personal, but feel free to keep them if you want to)
+alias skole='cd ~/Documents/Skole && nvim'
 
 ## typo-fixers
 alias poewroff='poweroff'
 alias powerof='poweroff'
+alias powerorff='poweroff'
 alias hotp='btop'
 
-## self-care
-node ~/bashrc-scripts/affirm.js
+## keyboard layout
+alias colemak='setxkbmap no -variant colemak && echo lol lykke te'
+alias qwerty='setxkbmap no && echo damn endelig'
