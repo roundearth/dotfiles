@@ -94,6 +94,8 @@ alias displayserver='echo $XDG_SESSION_TYPE'
 ## shortcuts for dotfiles (general and useable by anyone)
 alias i3config='nvim ~/.config/i3/config'
 alias bashrc='nvim ~/.bashrc && source ~/.bashrc && echo .bashrc successfully updated!'
+### go dev environment
+alias godev='cd ~/go/src'
 
 ## shortcuts for school (personal, but feel free to keep them if you want to)
 alias skole='cd ~/Documents/Skole && nvim'
@@ -104,6 +106,3 @@ alias powerof='poweroff'
 alias powerorff='poweroff'
 alias hotp='btop'
 
-## keyboard layout
-alias colemak='setxkbmap no -variant colemak && echo lol lykke te'
-alias qwerty='setxkbmap no && echo damn endelig'
