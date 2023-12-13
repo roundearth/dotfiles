@@ -24,16 +24,23 @@ keys = [
     Key([mod, "control"], "j", lazy.layout.grow_down()),
     Key([mod, "control"], "k", lazy.layout.grow_up()),
     Key([mod, "control"], "n", lazy.layout.normalize()),
-
+                    
     # Layout stuff
     Key([mod, "shift"], "Return", lazy.layout.toggle_split()),
     Key([mod, "shift"], "Space", lazy.next_layout()),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
 
     Key([mod], "t", lazy.window.toggle_floating()),
-
-    # Toggle between different layouts as defined below
     Key([mod], "q", lazy.window.kill()),
+
+    # Media and backlight keys
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Master 3%+")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 3%-")),
+    Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle")),
+
+    Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight +5")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("xbacklight -5")),
+
 
     # Launch apps
     Key([mod], "d", lazy.spawncmd()),

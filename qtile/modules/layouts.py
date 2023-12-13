@@ -8,7 +8,7 @@ layouts = [
     # layout.Bsp(),
     # layout.Matrix(),
     layout.MonadTall(border_width=1),
-    layout.MonadWide(border_width=1),
+    # layout.MonadWide(border_width=1),
     # layout.RatioTile(),
     # layout.Tile(),
     # layout.TreeTab(),

@@ -16,49 +16,7 @@ font pango: Noto Sans Regular 10
 # Set keybindings
 set $mod Mod4
 
-# Colemak-DH
-# set $a a
-# set $c c
-# set $d d
-# set $e e
-# set $f f
-# set $g g
-# set $h h
-# set $o o
-# set $p p
-# set $q q 
-# set $r r
-# set $s s
-# set $t t
-# set $v v
-# 
-# set $left m 
-# set $down n
-# set $up e 
-# set $right i
-
-# QWERTY
-  set $a a
-  set $c c
-  set $d s
-  set $e f
-  set $f t
-  set $g g
-  set $h h
-  set $o y
-  set $p ø
-  set $q q 
-  set $r p
-  set $s r
-  set $t b
-  set $v v 
-
-  set $left h 
-  set $down j
-  set $up k 
-  set $right l
-
-# default i3 tiling mode:
+# Colemak-D# default i3 tiling mode:
 workspace_layout default
 
 ##############################

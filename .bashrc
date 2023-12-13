@@ -88,21 +88,24 @@ _open_files_for_editing() {
 #######################
 # CUSTOM BASH ALIASES #
 #######################
-alias unfuck-wifi='sudo systemctl restart NetworkManager'
+alias unfuck-wifi='sudo systemctl restart NetworkManager && echo Wifi unfucked!'
 alias displayserver='echo $XDG_SESSION_TYPE'
 
 ## shortcuts for dotfiles (general and useable by anyone)
 alias i3config='nvim ~/.config/i3/config'
+alias swayconfig='nvim ~/.config/sway/config'
 alias bashrc='nvim ~/.bashrc && source ~/.bashrc && echo .bashrc successfully updated!'
 ### go dev environment
 alias godev='cd ~/go/src'
 
 ## shortcuts for school (personal, but feel free to keep them if you want to)
 alias skole='cd ~/Documents/Skole && nvim'
+alias todo='nvim ~/Documents/Personlig/todo.md'
 
 ## typo-fixers
 alias poewroff='poweroff'
 alias powerof='poweroff'
 alias powerorff='poweroff'
+alias oweroff='poweroff'
+alias pwoeroff='poweroff'
 alias hotp='btop'
-
