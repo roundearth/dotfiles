@@ -1,4 +1,4 @@
-# Default config for sway
+#mi Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
@@ -27,9 +27,9 @@ gaps outer 3
 #########################
 # OUTPUT CONFIGURATION #
 ########################
-output * bg ~/.config/sway/wallpaper/yourname-3.png fill
+output * bg ~/.config/sway/wallpaper/wwy-2.png fill
 
-output eDP-1 disable
+#output eDP-1 disable
 
 
 ########################
@@ -48,9 +48,9 @@ input type:touchpad {
 }
 
 # Set to 650 DPI with Piper instead
-# input type:mouse {
-#   pointer_accel -0.5
-# }
+ input type:mouse {
+   pointer_accel -1
+ }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -86,14 +86,14 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- 
 
 # Multimedia
-bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ 
-bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- 
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-bindsym XF86AudioMute exec amixer sset Master 
 
 #####################
 # WINDOW MANAGEMENT #
@@ -148,6 +148,8 @@ bindsym $mod+a focus parent
  }
  bindsym $mod+r mode "resize"
 
+client.focused "#4c7899" "#285577" "#ffffff" "#285577" "#285577"    
+
 ##############
 # WORKSPACES #
 ##############
@@ -201,6 +203,9 @@ for_window [app_id=$term] focus
 for_window [app_id=$browser] focus
 for_window [app_id=org.gnome.Nautilus] focus
 for_window [class=discord] focus
+
+# set floating windows
+for_window [class="Muse Sounds Manager"] floating enable
 
 #
 # Status Bar:
