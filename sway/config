@@ -29,7 +29,7 @@ gaps outer 3
 ########################
 output * bg ~/.config/sway/wallpaper/wwy-2.png fill
 
-#output eDP-1 disable
+output eDP-1 disable
 
 
 ########################
@@ -47,10 +47,9 @@ input type:touchpad {
   scroll_factor 1
 }
 
-# Set to 650 DPI with Piper instead
- input type:mouse {
-   pointer_accel -1
- }
+input "1133:45091:Logitech_Wireless_Mouse_MX_Master_3" {
+  pointer_accel -0.75
+}
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -67,7 +66,7 @@ bindsym Print exec grimshot --notify copy area
 bindsym Shift+Print exec grimshot save area - | swappy -f -
 
 # Autostart apps
-## exec --no-startup-id nextcloud
+exec --no-startup-id nextcloud
 
 # Log out from sway
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -205,31 +204,12 @@ for_window [app_id=org.gnome.Nautilus] focus
 for_window [class=discord] focus
 
 # set floating windows
+for_window [app_id="pavucontrol"] floating enable
 for_window [class="Muse Sounds Manager"] floating enable
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-
-# exec --no-startup-id waybar
-# bar {
-#     position top
-# 
-#     # When the status_command prints a new line to stdout, swaybar updates.
-#     # The default just shows the current date and time.
-#     status_command while date +'%Y-%d-%m %I:%M:%S %p'; do sleep 1; done
-# 
-#     colors {
-#         statusline #ffffff
-#         background #323232
-#         inactive_workspace #323232 #323232 #5c5c5c
-#     }
-# }
-
+# enable waybar
 bar {
   swaybar_command waybar
 }
-
 
 include /etc/sway/config.d/*
