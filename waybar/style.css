@@ -47,16 +47,14 @@ window#waybar.hidden {
 
 #workspaces button {
 	transition: none;
-	color: #B5E8E0;
+	color: #bd93f9;
 	background: transparent;
 	font-size: 16px;
 	border-radius: 2px;
 }
 
 #workspaces button.focused {
-	color: #ABE9B3;
-    border-top: 2px solid #ABE9B3;
-    border-bottom: 2px solid #ABE9B3;
+	color: #B5E8E0;
 }
 
 #network {
