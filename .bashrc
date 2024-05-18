@@ -89,18 +89,19 @@ _open_files_for_editing() {
 # CUSTOM BASH ALIASES #
 #######################
 alias unfuck-wifi='sudo systemctl restart NetworkManager && echo Wifi unfucked!'
-alias displayserver='echo $XDG_SESSION_TYPE'
 
 ## shortcuts for dotfiles (general and useable by anyone)
-alias i3config='nvim ~/.config/i3/config'
 alias swayconfig='nvim ~/.config/sway/config'
 alias bashrc='nvim ~/.bashrc && source ~/.bashrc && echo .bashrc successfully updated!'
-### go dev environment
-alias godev='cd ~/go/src'
+alias vencordify='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
+alias nolaptop='swaymsg output eDP-1 disable'
 
 ## shortcuts for school (personal, but feel free to keep them if you want to)
 alias skole='cd ~/Documents/Skole && nvim'
 alias todo='nvim ~/Documents/Personlig/todo.md'
+
+## other shortcuts
+alias yt-mp3='yt-dlp -x' # yes I am aware that this grabs a .opus and not a .mp3
 
 ## typo-fixers
 alias poewroff='poweroff'
@@ -108,4 +109,7 @@ alias powerof='poweroff'
 alias powerorff='poweroff'
 alias oweroff='poweroff'
 alias pwoeroff='poweroff'
+alias powreoff='poweroff'
 alias hotp='btop'
+alias botp='btop'
+alias vim='nvim'

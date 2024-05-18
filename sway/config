@@ -1,7 +1,3 @@
-#mi Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
 
 # Set variables
@@ -29,8 +25,7 @@ gaps outer 3
 ########################
 output * bg ~/.config/sway/wallpaper/wwy-2.png fill
 
-output eDP-1 disable
-
+#output eDP-1 disable
 
 ########################
 # INPUT CONFIGURATION #
@@ -66,7 +61,7 @@ bindsym Print exec grimshot --notify copy area
 bindsym Shift+Print exec grimshot save area - | swappy -f -
 
 # Autostart apps
-exec --no-startup-id nextcloud
+#exec --no-startup-id nextcloud
 
 # Log out from sway
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -197,15 +192,19 @@ assign [app_id="$term"] $ws1
 assign [app_id="$browser"] $ws2
 assign [app_id="org.gnome.Nautilus"] $ws3
 assign [class="discord"] $ws4 
+assign [class="Spotify"] $ws10
 
 for_window [app_id=$term] focus
 for_window [app_id=$browser] focus
 for_window [app_id=org.gnome.Nautilus] focus
 for_window [class=discord] focus
+for_window [class=Spotify] focus
 
 # set floating windows
 for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="com.adrienplazas.Metronome"] floating enable
 for_window [class="Muse Sounds Manager"] floating enable
+
 
 # enable waybar
 bar {
