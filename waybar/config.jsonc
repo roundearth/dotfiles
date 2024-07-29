@@ -2,13 +2,12 @@
   "layer" : "top",
   "modules-left": ["sway/workspaces","sway/mode"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery"],
   "modules-right": ["cpu", "memory", "backlight", "pulseaudio", "battery",],
 
   "pulseaudio" : {
     "tooltip" : false,
     "scroll-step" : 5,
-    "format" : "{icon} {volume}%",
+    "format" : "{icon}  {volume}%",
     "format-muted" : "  ",
     "on-click" : "pavucontrol",
     "format-icons" : {

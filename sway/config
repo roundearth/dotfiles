@@ -60,9 +60,6 @@ bindsym $mod+n exec $filemanager
 bindsym Print exec grimshot --notify copy area
 bindsym Shift+Print exec grimshot save area - | swappy -f -
 
-# Autostart apps
-#exec --no-startup-id nextcloud
-
 # Log out from sway
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
@@ -75,7 +72,7 @@ bindsym $mod+Shift+r reload
 # Do not disturb mode
 bindsym $mod+Shift+d exec --no-startup-ip ~/.config/sway/scripts/dunst-setpaused.sh
 
-# Brightness
+# Monitor brightness
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+ 
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- 
 
@@ -204,6 +201,7 @@ for_window [class=Spotify] focus
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="com.adrienplazas.Metronome"] floating enable
 for_window [class="Muse Sounds Manager"] floating enable
+for_window [class="Nextcloud"] floating enable
 
 
 # enable waybar
