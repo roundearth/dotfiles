@@ -2,7 +2,7 @@
   "layer" : "top",
   "modules-left": ["sway/workspaces","sway/mode"],
   "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory", "backlight", "pulseaudio", "battery",],
+  "modules-right": ["cpu", "memory", "backlight", "pulseaudio", "battery"],
 
   "pulseaudio" : {
     "tooltip" : false,
@@ -77,18 +77,7 @@
       "critical-threshold": 80,
       "format": "{temperatureC}°C {icon}",
       "format-icons": ["", "", ""]
-    },
-
-  "custom/launcher" : {
-      "format" : " ",
-      "on-click" : "fuzzel",
-      "on-click-right" : "killall fuzzel",
-  },
-  
-  "custom/power" : {
-      "format" : " ",
-      "on-click" : "bash ~/.config/rofi/leave/leave.sh",
-  },
+    }
 },
 
 
